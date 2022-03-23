@@ -24,9 +24,9 @@
 		3E4A8CCA27EA462B001D42BA /* NASADailyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CC927EA462B001D42BA /* NASADailyImage.swift */; };
 		3E4A8CD027EA49FA001D42BA /* NASAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CCF27EA49FA001D42BA /* NASAViewModel.swift */; };
 		3E4A8CD227EAD935001D42BA /* NASADailyImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4A8CD127EAD935001D42BA /* NASADailyImage.storyboard */; };
-		3E4A8CD527EAE0A0001D42BA /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CD427EAE0A0001D42BA /* UIImageView.swift */; };
 		3E4A8CD727EAE7D0001D42BA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CD627EAE7D0001D42BA /* Utilities.swift */; };
 		3E4A8CDA27EB1B12001D42BA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CD927EB1B12001D42BA /* Network.swift */; };
+		3E4A8CE027EB40D4001D42BA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CDF27EB40D4001D42BA /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,9 +68,9 @@
 		3E4A8CC927EA462B001D42BA /* NASADailyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASADailyImage.swift; sourceTree = "<group>"; };
 		3E4A8CCF27EA49FA001D42BA /* NASAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAViewModel.swift; sourceTree = "<group>"; };
 		3E4A8CD127EAD935001D42BA /* NASADailyImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NASADailyImage.storyboard; sourceTree = "<group>"; };
-		3E4A8CD427EAE0A0001D42BA /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		3E4A8CD627EAE7D0001D42BA /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3E4A8CD927EB1B12001D42BA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		3E4A8CDF27EB40D4001D42BA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,9 +209,9 @@
 		3E4A8CD827EB1AE4001D42BA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3E4A8CD427EAE0A0001D42BA /* UIImageView.swift */,
 				3E4A8CD627EAE7D0001D42BA /* Utilities.swift */,
 				3E4A8CD927EB1B12001D42BA /* Network.swift */,
+				3E4A8CDF27EB40D4001D42BA /* Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -352,11 +352,11 @@
 				3E4A8C9127EA3271001D42BA /* NASAViewController.swift in Sources */,
 				3E4A8C8D27EA3271001D42BA /* AppDelegate.swift in Sources */,
 				3E4A8CD727EAE7D0001D42BA /* Utilities.swift in Sources */,
-				3E4A8CD527EAE0A0001D42BA /* UIImageView.swift in Sources */,
 				3E4A8CC127EA3F57001D42BA /* RequestError.swift in Sources */,
 				3E4A8CC327EA3F83001D42BA /* HTTPClient.swift in Sources */,
 				3E4A8CBD27EA3F14001D42BA /* Endpoint.swift in Sources */,
 				3E4A8CC627EA4038001D42BA /* NASAEndpoint.swift in Sources */,
+				3E4A8CE027EB40D4001D42BA /* Extensions.swift in Sources */,
 				3E4A8CC827EA45C4001D42BA /* NASAAPIService.swift in Sources */,
 				3E4A8CBF27EA3F35001D42BA /* RequestMethod.swift in Sources */,
 				3E4A8CDA27EB1B12001D42BA /* Network.swift in Sources */,
