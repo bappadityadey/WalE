@@ -11,6 +11,7 @@ import Combine
 class NASAViewController: UIViewController {
     
     var viewModel: NASAViewModel?
+    var network: Network?
     
     @IBOutlet weak var dailyImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,8 +24,9 @@ class NASAViewController: UIViewController {
         addActivityIndicator()
         navigationItem.title = viewModel?.getTitle()
         viewModel = NASAViewModel()
+        network = Network()
         
-        viewModel?.$connected.sink(receiveValue: { [weak self] status in
+        network?.$connected.sink(receiveValue: { [weak self] status in
             guard let self = self else { return }
             if status == true {
                 self.fetchDailyImage()
@@ -78,6 +80,11 @@ class NASAViewController: UIViewController {
     
     private func stopLoading() {
         activityIndicator.stopAnimating()
+    }
+    
+    deinit {
+        anyCancellables.forEach({ $0.cancel() })
+        anyCancellables.removeAll()
     }
 }
 

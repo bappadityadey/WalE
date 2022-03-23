@@ -10,11 +10,6 @@ import Network
 import Combine
 
 class NASAViewModel {
-    @Published
-    private(set) var connected: Bool?
-    
-    let monitor = NWPathMonitor()
-    let queue = DispatchQueue(label: "Monitor")
     
     let service: NASAAPIServiceable = NASAAPIService()
     
@@ -27,10 +22,6 @@ class NASAViewModel {
         case .failure(let error):
             return .failure(error)
         }
-    }
-    
-    init() {
-        checkConnection()
     }
     
     func getTitle() -> String {
@@ -54,16 +45,5 @@ class NASAViewModel {
             }
         }
         return nil
-    }
-    
-    func checkConnection() {
-        monitor.pathUpdateHandler = { path in
-            if path.status == .satisfied {
-                self.connected = true
-            } else {
-                self.connected = false
-            }
-        }
-        monitor.start(queue: queue)
     }
 }
