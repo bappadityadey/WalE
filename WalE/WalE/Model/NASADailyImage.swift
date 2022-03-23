@@ -8,7 +8,6 @@
 import Foundation
 
 struct NASADailyImage: Codable {
-    let copyright: String
     let date: String
     let explanation: String
     let title: String

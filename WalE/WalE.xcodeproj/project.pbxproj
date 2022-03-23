@@ -10,7 +10,6 @@
 		3E4A8C8D27EA3271001D42BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8C8C27EA3271001D42BA /* AppDelegate.swift */; };
 		3E4A8C8F27EA3271001D42BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8C8E27EA3271001D42BA /* SceneDelegate.swift */; };
 		3E4A8C9127EA3271001D42BA /* NASAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8C9027EA3271001D42BA /* NASAViewController.swift */; };
-		3E4A8C9427EA3271001D42BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4A8C9227EA3271001D42BA /* Main.storyboard */; };
 		3E4A8C9627EA3272001D42BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E4A8C9527EA3272001D42BA /* Assets.xcassets */; };
 		3E4A8C9927EA3272001D42BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4A8C9727EA3272001D42BA /* LaunchScreen.storyboard */; };
 		3E4A8CA427EA3272001D42BA /* WalETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CA327EA3272001D42BA /* WalETests.swift */; };
@@ -24,6 +23,9 @@
 		3E4A8CC827EA45C4001D42BA /* NASAAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CC727EA45C4001D42BA /* NASAAPIService.swift */; };
 		3E4A8CCA27EA462B001D42BA /* NASADailyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CC927EA462B001D42BA /* NASADailyImage.swift */; };
 		3E4A8CD027EA49FA001D42BA /* NASAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CCF27EA49FA001D42BA /* NASAViewModel.swift */; };
+		3E4A8CD227EAD935001D42BA /* NASADailyImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4A8CD127EAD935001D42BA /* NASADailyImage.storyboard */; };
+		3E4A8CD527EAE0A0001D42BA /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CD427EAE0A0001D42BA /* UIImageView.swift */; };
+		3E4A8CD727EAE7D0001D42BA /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4A8CD627EAE7D0001D42BA /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,6 @@
 		3E4A8C8C27EA3271001D42BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E4A8C8E27EA3271001D42BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3E4A8C9027EA3271001D42BA /* NASAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAViewController.swift; sourceTree = "<group>"; };
-		3E4A8C9327EA3271001D42BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E4A8C9527EA3272001D42BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E4A8C9827EA3272001D42BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E4A8C9A27EA3272001D42BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		3E4A8CC727EA45C4001D42BA /* NASAAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAAPIService.swift; sourceTree = "<group>"; };
 		3E4A8CC927EA462B001D42BA /* NASADailyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASADailyImage.swift; sourceTree = "<group>"; };
 		3E4A8CCF27EA49FA001D42BA /* NASAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAViewModel.swift; sourceTree = "<group>"; };
+		3E4A8CD127EAD935001D42BA /* NASADailyImage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NASADailyImage.storyboard; sourceTree = "<group>"; };
+		3E4A8CD427EAE0A0001D42BA /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		3E4A8CD627EAE7D0001D42BA /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +124,9 @@
 				3E4A8CCD27EA49B2001D42BA /* Controller */,
 				3E4A8CCC27EA4976001D42BA /* Service */,
 				3E4A8CC427EA4000001D42BA /* Network */,
+				3E4A8CD327EAD93B001D42BA /* View */,
 				3E4A8C8C27EA3271001D42BA /* AppDelegate.swift */,
 				3E4A8C8E27EA3271001D42BA /* SceneDelegate.swift */,
-				3E4A8C9227EA3271001D42BA /* Main.storyboard */,
 				3E4A8C9527EA3272001D42BA /* Assets.xcassets */,
 				3E4A8C9727EA3272001D42BA /* LaunchScreen.storyboard */,
 				3E4A8C9A27EA3272001D42BA /* Info.plist */,
@@ -162,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				3E4A8CC927EA462B001D42BA /* NASADailyImage.swift */,
+				3E4A8CD427EAE0A0001D42BA /* UIImageView.swift */,
+				3E4A8CD627EAE7D0001D42BA /* Utilities.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +195,14 @@
 				3E4A8CCF27EA49FA001D42BA /* NASAViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3E4A8CD327EAD93B001D42BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E4A8CD127EAD935001D42BA /* NASADailyImage.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,8 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E4A8C9927EA3272001D42BA /* LaunchScreen.storyboard in Resources */,
+				3E4A8CD227EAD935001D42BA /* NASADailyImage.storyboard in Resources */,
 				3E4A8C9627EA3272001D42BA /* Assets.xcassets in Resources */,
-				3E4A8C9427EA3271001D42BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +340,8 @@
 				3E4A8CCA27EA462B001D42BA /* NASADailyImage.swift in Sources */,
 				3E4A8C9127EA3271001D42BA /* NASAViewController.swift in Sources */,
 				3E4A8C8D27EA3271001D42BA /* AppDelegate.swift in Sources */,
+				3E4A8CD727EAE7D0001D42BA /* Utilities.swift in Sources */,
+				3E4A8CD527EAE0A0001D42BA /* UIImageView.swift in Sources */,
 				3E4A8CC127EA3F57001D42BA /* RequestError.swift in Sources */,
 				3E4A8CC327EA3F83001D42BA /* HTTPClient.swift in Sources */,
 				3E4A8CBD27EA3F14001D42BA /* Endpoint.swift in Sources */,
@@ -369,14 +385,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3E4A8C9227EA3271001D42BA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3E4A8C9327EA3271001D42BA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3E4A8C9727EA3272001D42BA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -513,7 +521,7 @@
 				INFOPLIST_FILE = WalE/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = NASADailyImage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -540,7 +548,7 @@
 				INFOPLIST_FILE = WalE/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = NASADailyImage;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

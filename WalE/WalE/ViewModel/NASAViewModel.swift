@@ -10,15 +10,17 @@ import Foundation
 struct NASAViewModel {
     let service: NASAAPIServiceable = NASAAPIService()
     
-    func fetchDailyImage() {
-        Task(priority: .background) {
-            let result = await service.getDailyImage()
-            switch result {
-            case .success(let imageResponse):
-                print(imageResponse.url)
-            case .failure(let error):
-                print(error.customMessage)
-            }
+    func fetchDailyImage() async -> Result<NASADailyImage, RequestError> {
+        let result = await service.getDailyImage()
+        switch result {
+        case .success(let imageResponse):
+            return .success(imageResponse)
+        case .failure(let error):
+            return .failure(error)
         }
+    }
+    
+    func getTitle() -> String {
+        return "Daily Image"
     }
 }
