@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class NASAViewController: UIViewController {
     
@@ -15,13 +16,27 @@ class NASAViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     let activityIndicator = UIActivityIndicatorView(style: .large)
+    private var anyCancellables: Set<AnyCancellable> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addActivityIndicator()
         navigationItem.title = viewModel?.getTitle()
         viewModel = NASAViewModel()
-        fetchDailyImage()
+        
+        viewModel?.$connected.sink(receiveValue: { [weak self] status in
+            guard let self = self else { return }
+            if status == true {
+                self.fetchDailyImage()
+            } else if status == false {
+                print("No internet connction")
+                if let imageModel = self.viewModel?.fetchSavedDailyImageModel() {
+                    Task(priority: .background) {
+                        await self.loadDailyImage(imageModel: imageModel)
+                    }
+                }
+            }
+        }).store(in: &anyCancellables)
     }
     
     private func fetchDailyImage() {
@@ -31,19 +46,23 @@ class NASAViewController: UIViewController {
             stopLoading()
             switch result {
             case .success(let imageModel):
-                if (imageModel.media_type == Constants.MediaType.image.rawValue) {
-                    await dailyImageView.loadImage(withUrl: imageModel.url)
-                }else {
-                    dailyImageView.image = UIImage(named: Constants.NoImage)
-                }
-                titleLabel.text = imageModel.title
-                descriptionTextView.text = imageModel.explanation
+                await loadDailyImage(imageModel: imageModel)
             case .failure(let error):
                 showAlert(error: error.customMessage)
             case .none:
                 break
             }
         }
+    }
+    
+    private func loadDailyImage(imageModel: NASADailyImage) async {
+        if (imageModel.media_type == Constants.MediaType.image.rawValue) {
+            await dailyImageView.loadImage(withUrl: imageModel.url)
+        } else {
+            dailyImageView.image = UIImage(named: Constants.NoImage)
+        }
+        titleLabel.text = imageModel.title
+        descriptionTextView.text = imageModel.explanation
     }
     
     private func addActivityIndicator() {
